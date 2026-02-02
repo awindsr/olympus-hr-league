@@ -1,10 +1,8 @@
-"use client"
 import Link from "next/link";
-import { ArrowRight, Eye } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { StackedCards } from "@/components/StackedCards";
-import { ElevatedEmblem } from "@/components/ElevatedEmblem";
+import { HeroEmblem } from "@/components/about/HeroEmblem";
 
 
 const objectives = [
@@ -65,10 +63,8 @@ export default function AboutPage() {
 
         <div className="container mx-auto px-4 relative z-10 flex flex-col items-center">
           {/* Top Label */}
-          <div className="mb-12 text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-foreground/40 font-bold mb-4">
-              Flagship Initiative
-            </p>
+          <div className="mt-26 text-center">
+
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-primary/30" />
               <span className="text-sm font-medium text-foreground tracking-widest">OLYMPUS 2026</span>
@@ -78,19 +74,7 @@ export default function AboutPage() {
 
           {/* Central Asset Container */}
           <div className="relative w-72 h-72 md:w-[450px] md:h-[450px] flex items-center justify-center mb-16">
-            <motion.div
-              animate={{
-                y: [0, -20, 0],
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-              className="relative z-20 w-full h-full"
-            >
-              <ElevatedEmblem />
-            </motion.div>
+            <HeroEmblem />
 
             {/* Background halo */}
             <div className="absolute inset-0 rounded-full bg-primary/10 blur-[100px] scale-150 -z-10" />
