@@ -169,11 +169,30 @@ export default function ContactPage() {
                                         </div>
                                     </div>
 
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                        <div className="space-y-2">
+                                            <label className="text-xs font-black uppercase tracking-widest text-black/60">Email Address</label>
+                                            <input
+                                                type="email"
+                                                placeholder="you@email.com"
+                                                className="w-full bg-transparent border-b-2 border-black/10 focus:border-black py-2 outline-none placeholder:text-black/30 font-bold transition-colors"
+                                            />
+                                        </div>
+                                        <div className="space-y-2">
+                                            <label className="text-xs font-black uppercase tracking-widest text-black/60">Phone Number</label>
+                                            <input
+                                                type="tel"
+                                                placeholder="+91 00000 00000"
+                                                className="w-full bg-transparent border-b-2 border-black/10 focus:border-black py-2 outline-none placeholder:text-black/30 font-bold transition-colors"
+                                            />
+                                        </div>
+                                    </div>
+
                                     <div className="space-y-2">
-                                        <label className="text-xs font-black uppercase tracking-widest text-black/60">Email Address</label>
+                                        <label className="text-xs font-black uppercase tracking-widest text-black/60">College / Organization</label>
                                         <input
-                                            type="email"
-                                            placeholder="you@company.com"
+                                            type="text"
+                                            placeholder="Your Institution"
                                             className="w-full bg-transparent border-b-2 border-black/10 focus:border-black py-2 outline-none placeholder:text-black/30 font-bold transition-colors"
                                         />
                                     </div>
@@ -182,7 +201,7 @@ export default function ContactPage() {
                                         <label className="text-xs font-black uppercase tracking-widest text-black/60">Tell us about your interest</label>
                                         <textarea
                                             rows={2}
-                                            placeholder="Tell us a little about your project..."
+                                            placeholder="How would you like to contribute or what are you looking to gain?"
                                             className="w-full bg-transparent border-b-2 border-black/10 focus:border-black py-2 outline-none placeholder:text-black/30 font-bold transition-colors resize-none"
                                         />
                                     </div>
@@ -191,12 +210,12 @@ export default function ContactPage() {
                                         <p className="text-xs font-black uppercase tracking-widest text-black/60">How can we help?</p>
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                             {[
-                                                "Partnership",
-                                                "Registration Query",
-                                                "Sponsorship",
+                                                "Participant Registration",
+                                                "Partnership / Sponsorship",
                                                 "Speaking Slot",
-                                                "Volunteer",
-                                                "Other"
+                                                "Volunteer Opportunities",
+                                                "µLearn HR Interest Group",
+                                                "Other Inquiry"
                                             ].map((item) => (
                                                 <label key={item} className="flex items-center gap-3 group cursor-pointer">
                                                     <div className="w-5 h-5 rounded border-2 border-black/20 group-hover:border-black flex items-center justify-center transition-colors">

@@ -96,9 +96,9 @@ export default function AgendaPage() {
                         Be part of the founding cohort of Olympus
                     </h2>
                     <Button asChild variant="white" size="xl" className="rounded-full px-10">
-                        <Link href="/contact">
+                        <a href="https://mulearn.org/r/olympus_thehrleague" target="_blank" rel="noopener noreferrer">
                             Register Now
-                        </Link>
+                        </a>
                     </Button>
                 </div>
             </section>

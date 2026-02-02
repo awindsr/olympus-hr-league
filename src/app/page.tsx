@@ -165,10 +165,10 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild variant="white" size="xl">
-                <Link href="/contact">
+                <a href="https://mulearn.org/r/olympus_thehrleague" target="_blank" rel="noopener noreferrer">
                   Register Now
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+                </a>
               </Button>
               <Button asChild variant="secondary" size="xl">
                 <Link href="/agenda">
@@ -377,9 +377,9 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild variant="default" size="xl" className="rounded-full px-8">
-                <Link href="/contact">
+                <a href="https://mulearn.org/r/olympus_thehrleague" target="_blank" rel="noopener noreferrer">
                   Be Part of Founding Cohort
-                </Link>
+                </a>
               </Button>
               <Button asChild variant="outline" size="xl" className="rounded-full px-8">
                 <Link href="/agenda">

@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/agenda", label: "Agenda" },
   { href: "/participants", label: "Participants" },
   { href: "/sponsors", label: "Sponsors" },
-  { href: "/contact", label: "Contact / Register" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Navbar() {
@@ -32,7 +32,7 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.filter(l => l.href !== "/contact").map((link) => (
+            {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -48,12 +48,14 @@ export function Navbar() {
 
           {/* CTA Button + Mobile Toggle */}
           <div className="flex items-center gap-4">
-            <Link
-              href="/contact"
+            <a
+              href="https://mulearn.org/r/olympus_thehrleague"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center justify-center rounded-full bg-[#1A1C1E] px-6 py-2.5 text-xs font-black uppercase tracking-widest text-primary shadow-lg hover:bg-black transition-all hover:scale-105 active:scale-95"
             >
-              Join Out!
-            </Link>
+              Register Now
+            </a>
 
             {/* Mobile Menu Button */}
             <button

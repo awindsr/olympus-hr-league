@@ -206,10 +206,10 @@ export default function ParticipantsPage() {
                         YOUR <span className="text-primary italic">HR CAREER?</span>
                     </h2>
                     <Button asChild size="xl" className="rounded-full px-12 h-16 text-lg font-bold group">
-                        <Link href="/contact" className="flex items-center gap-3">
+                        <a href="https://mulearn.org/r/olympus_thehrleague" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
                             Register Now
                             <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                        </Link>
+                        </a>
                     </Button>
                 </div>
             </section>

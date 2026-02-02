@@ -99,10 +99,10 @@ export default function AboutPage() {
           {/* Central CTA */}
           <div className="mb-24 scale-110">
             <Button asChild variant="default" size="xl" className="rounded-full px-12 py-8 text-lg font-bold shadow-[0_15px_30px_rgba(248,197,56,0.2)] group overflow-hidden relative">
-              <Link href="/contact" className="relative z-10 flex items-center gap-2">
+              <a href="https://mulearn.org/r/olympus_thehrleague" target="_blank" rel="noopener noreferrer" className="relative z-10 flex items-center gap-2">
                 Start the Journey
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </a>
             </Button>
           </div>
 
