@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { contactSchema, type ContactFormValues } from "@/lib/schemas/contact";
 import { submitContactForm } from "@/app/actions/contact";
-import { useToast } from "@/components/ui/use-toast"; // Assuming toast exists, if not we'll use simple state
+
 
 export function useContactForm() {
     const [success, setSuccess] = useState(false);
