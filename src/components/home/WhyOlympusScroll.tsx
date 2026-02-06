@@ -50,12 +50,12 @@ export function WhyOlympusScroll() {
         target: targetRef,
     });
 
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-66.6%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-85%"]);
 
     return (
-        <section ref={targetRef} className="relative h-[300vh] bg-background">
-            <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
-                <div className="container mx-auto px-4 mb-12">
+        <section ref={targetRef} className="relative md:h-[500vh] bg-background">
+            <div className="relative md:sticky top-0 md:min-h-screen flex flex-col justify-center overflow-hidden py-16 ">
+                <div className="container mx-auto px-4 mb-4">
                     <div className="max-w-xl">
                         <svg width="40" height="12" viewBox="0 0 40 12" fill="none" className="text-primary mb-4">
                             <title>Decorative zigzag pattern</title>
@@ -72,11 +72,46 @@ export function WhyOlympusScroll() {
                     </div>
                 </div>
 
-                <motion.div style={{ x }} className="flex gap-8 px-4 md:px-[10%]">
+                {/* Mobile: Vertical Stack | Desktop: Horizontal Scroll */}
+                <div className="md:hidden flex flex-col gap-6 px-4">
                     {whyOlympusCards.map((card, idx) => (
                         <div
                             key={idx}
-                            className={`relative shrink-0 w-[85vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[40px] p-8 md:p-12 overflow-hidden shadow-2xl border border-border flex flex-col justify-between ${card.bg.startsWith('bg-') ? card.bg : ''}`}
+                            className={`relative w-full rounded-[32px] p-8 overflow-hidden shadow-lg border border-border flex flex-col justify-between ${card.bg.startsWith('bg-') ? card.bg : ''}`}
+                            style={{ backgroundColor: !card.bg.startsWith('bg-') ? card.bg : undefined, minHeight: '320px' }}
+                        >
+                            {card.pattern}
+                            <div className="relative z-10 flex flex-col h-full">
+                                <div className="mt-auto">
+                                    <div className={`w-12 h-1 gap-1 mb-6 ${card.accent}`} />
+                                    <h3 className="text-2xl font-extrabold font-heading text-foreground mb-4 leading-tight">
+                                        {card.title}
+                                    </h3>
+                                    <p className="text-base text-foreground/70 leading-relaxed">
+                                        {card.description}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                    <div className="relative w-full rounded-[32px] p-8 bg-foreground flex flex-col justify-center items-center text-center min-h-[300px]">
+                        <h3 className="text-3xl font-extrabold font-heading text-background mb-6 leading-tight">
+                            Ready to Lead?
+                        </h3>
+                        <Button asChild variant="white" size="lg" className="rounded-full px-8">
+                            <Link href="/about">
+                                About Olympus
+                            </Link>
+                        </Button>
+                    </div>
+                </div>
+
+                {/* Desktop: Horizontal Motion */}
+                <motion.div style={{ x }} className="hidden md:flex gap-8 px-4 md:px-[10%]">
+                    {whyOlympusCards.map((card, idx) => (
+                        <div
+                            key={idx}
+                            className={`relative shrink-0 w-[600px] h-[400px] max-h-[50vh] rounded-[40px] p-12 overflow-hidden shadow-2xl border border-border flex flex-col justify-between ${card.bg.startsWith('bg-') ? card.bg : ''}`}
                             style={{ backgroundColor: !card.bg.startsWith('bg-') ? card.bg : undefined }}
                         >
                             {card.pattern}
@@ -84,7 +119,7 @@ export function WhyOlympusScroll() {
                             <div className="relative z-10 flex flex-col h-full">
                                 <div className="mt-auto">
                                     <div className={`w-12 h-1 gap-1 mb-6 ${card.accent}`} />
-                                    <h3 className="text-3xl md:text-5xl font-extrabold font-heading text-foreground mb-6 leading-tight">
+                                    <h3 className="text-5xl font-extrabold font-heading text-foreground mb-6 leading-tight">
                                         {card.title}
                                     </h3>
                                     <p className="text-lg text-foreground/70 max-w-md leading-relaxed">
@@ -94,8 +129,8 @@ export function WhyOlympusScroll() {
                             </div>
                         </div>
                     ))}
-                    <div className="relative shrink-0 w-[85vw] md:w-[600px] h-[400px] md:h-[500px] rounded-[40px] p-8 md:p-12 bg-foreground flex flex-col justify-center items-center text-center">
-                        <h3 className="text-3xl md:text-5xl font-extrabold font-heading text-background mb-8 leading-tight">
+                    <div className="relative shrink-0 w-[600px]  h-[400px] max-h-[50vh] rounded-[40px] p-12 bg-foreground flex flex-col justify-center items-center text-center">
+                        <h3 className="text-5xl font-extrabold font-heading text-background mb-8 leading-tight">
                             Ready to Lead?
                         </h3>
                         <Button asChild variant="white" size="xl" className="rounded-full px-10">

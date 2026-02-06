@@ -22,7 +22,7 @@ export function Navbar() {
   return (
     <header className="fixed top-6 inset-x-0 z-50 flex justify-center pointer-events-none">
       <div className="container max-w-5xl px-4 pointer-events-auto">
-        <div className="bg-white/70 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.08)] rounded-full px-6 py-2 md:py-3 flex items-center justify-between">
+        <div className="bg-white/90 md:bg-white/70 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.08)] rounded-full px-6 py-2 md:py-3 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <span className="text-xl font-black font-heading text-[#1A1C1E] tracking-tighter uppercase group-hover:text-primary transition-colors">
@@ -31,7 +31,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -52,7 +52,7 @@ export function Navbar() {
               href="https://mulearn.org/r/olympus_thehrleague"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center justify-center rounded-full bg-[#1A1C1E] px-6 py-2.5 text-xs font-black uppercase tracking-widest text-primary shadow-lg hover:bg-black transition-all hover:scale-105 active:scale-95"
+              className="hidden lg:inline-flex items-center justify-center rounded-full bg-[#1A1C1E] px-6 py-2.5 text-xs font-black uppercase tracking-widest text-primary shadow-lg hover:bg-black transition-all hover:scale-105 active:scale-95"
             >
               Register Now
             </a>
@@ -60,7 +60,7 @@ export function Navbar() {
             {/* Mobile Menu Button */}
             <button
               type="button"
-              className="md:hidden p-2 text-[#1A1C1E] hover:bg-[#1A1C1E]/5 rounded-full transition-colors"
+              className="lg:hidden p-2 text-[#1A1C1E] hover:bg-[#1A1C1E]/5 rounded-full transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -78,7 +78,7 @@ export function Navbar() {
           <motion.nav
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="md:hidden mt-4 bg-white/90 backdrop-blur-xl border border-white/20 rounded-[2rem] p-6 shadow-2xl"
+            className="lg:hidden mt-4 bg-white/90 backdrop-blur-xl border border-white/20 rounded-[2rem] p-6 shadow-2xl"
           >
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (

@@ -75,8 +75,8 @@ export function ParticipantHero() {
                     </div>
 
                     {/* 5. Core Value Statistics (Bottom Row - Absolute Separation) */}
-                    <div className="lg:col-span-12 mt-12">
-                        <div className="flex flex-wrap md:flex-nowrap justify-between items-start gap-12 lg:pr-[20%]">
+                    <div className="lg:col-span-12 lg:mt-12 col-span-1">
+                        <div className="flex flex-col md:flex-row justify-around items-center gap-12 lg:pr-[20%]">
                             <StatItem {...gains[0]} />
                             <StatItem {...gains[1]} />
                             <StatItem {...gains[2]} />

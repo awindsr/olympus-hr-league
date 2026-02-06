@@ -5,7 +5,7 @@ import { AudienceShowcase } from "@/components/participants/AudienceShowcase";
 
 export default function ParticipantsPage() {
     return (
-        <div className="flex flex-col min-h-screen bg-background text-[#1A1C1E]">
+        <div className="flex flex-col min-h-screen bg-background text-[#1A1C1E] mt-12">
             {/* High-Fidelity Hero Section */}
             <ParticipantHero />
 

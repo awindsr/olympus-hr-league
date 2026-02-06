@@ -8,9 +8,9 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col justify-center py-20 md:py-32 overflow-hidden">
+      <section className="relative min-h-screen flex flex-col justify-center pt-40 pb-20 md:pt-48 md:pb-32 overflow-hidden">
         {/* Yellow Semi-Circle Background */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 w-[70vw] h-[80vh] md:w-[80vw] md:h-[90vh] rounded-t-full bg-primary z-0" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 w-[150vw] h-[60vh] md:w-[150vw] md:h-[90vh] lg:w-[100vw] rounded-t-full bg-primary z-0" />
 
         {/* Birds Lottie Animation */}
         <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 z-1">
@@ -26,11 +26,11 @@ export default function HomePage() {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold font-heading text-foreground mb-4">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-extrabold font-heading text-foreground mb-4">
               Olympus: The HR Icon
             </h1>
             <div className="inline-block bg-secondary text-secondary-foreground px-4 py-2 mb-4">
-              <p className="text-xl md:text-2xl font-semibold">
+              <p className="text-sm md:text-2xl font-semibold">
                 Where Leaders Learn to Lead People
               </p>
             </div>
@@ -147,7 +147,7 @@ export default function HomePage() {
       </section>
 
       {/* Who Should Participate */}
-      <section className="min-h-screen flex flex-col justify-center py-16 md:py-24 bg-background relative overflow-hidden">
+      <section className="min-h-screen flex flex-col justify-center py-6 bg-background relative overflow-hidden">
         <div className="container mx-auto px-4">
           {/* Section Title */}
           <div className="text-center mb-16">
@@ -159,11 +159,11 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Scattered Layout */}
-          <div className="relative min-h-[600px] md:min-h-[700px] max-w-6xl mx-auto">
+          {/* Scattered Layout - Mobile: Stacked, Desktop: Scattered */}
+          <div className="relative md:min-h-[700px] max-w-6xl mx-auto flex flex-col gap-12 md:block">
 
             {/* Engineering Students - Top Left */}
-            <div className="absolute top-0 left-0 md:left-[5%] flex flex-col items-center md:items-start gap-4 w-[45%] md:w-auto">
+            <div className="md:absolute md:top-0 md:left-[5%] flex flex-col items-center md:items-start gap-4">
               <div className="relative">
                 <div className="absolute inset-0 bg-primary rounded-full scale-90 -z-10 translate-x-4 translate-y-4" />
                 <img
@@ -175,12 +175,12 @@ export default function HomePage() {
               <div className="text-center md:text-left">
                 <p className="text-xs uppercase tracking-widest text-foreground/50 mb-1">Students</p>
                 <h3 className="text-lg md:text-xl font-bold text-foreground">Engineering<br />Students</h3>
-                <p className="text-xs text-foreground/40 max-w-[150px]">Exploring management pathways and human-side tech leadership.</p>
+                <p className="text-xs text-foreground/40 max-w-[150px] mx-auto md:mx-0">Exploring management pathways and human-side tech leadership.</p>
               </div>
             </div>
 
             {/* BBA/MBA Students - Center/Bottom */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
+            <div className="md:absolute md:bottom-0 md:left-1/2 md:-translate-x-1/2 flex flex-col items-center gap-4">
               <div className="relative">
                 <div className="absolute inset-0 bg-primary rounded-full scale-90 -z-10 translate-x-2 translate-y-2" />
                 <img
@@ -192,12 +192,12 @@ export default function HomePage() {
               <div className="text-center">
                 <p className="text-xs uppercase tracking-widest text-foreground/50 mb-1">Degrees</p>
                 <h3 className="text-lg md:text-xl font-bold text-foreground">BBA / MBA / HR<br />Students</h3>
-                <p className="text-xs text-foreground/40 max-w-[200px]">Seeking practical exposure to complement theoretical learning.</p>
+                <p className="text-xs text-foreground/40 max-w-[200px] mx-auto">Seeking practical exposure to complement theoretical learning.</p>
               </div>
             </div>
 
             {/* HR Enthusiasts - Top Right */}
-            <div className="absolute top-8 right-0 md:right-[5%] flex flex-col items-center md:items-end gap-4 w-[45%] md:w-auto">
+            <div className="md:absolute md:top-8 md:right-[5%] flex flex-col items-center md:items-end gap-4">
               <div className="relative">
                 <div className="absolute inset-0 bg-primary rounded-full scale-90 -z-10 -translate-x-4 translate-y-4" />
                 <img
@@ -209,7 +209,7 @@ export default function HomePage() {
               <div className="text-center md:text-right">
                 <p className="text-xs uppercase tracking-widest text-foreground/50 mb-1">Professionals</p>
                 <h3 className="text-lg md:text-xl font-bold text-foreground">HR Aspirants &<br />Early-Career</h3>
-                <p className="text-xs text-foreground/40 max-w-[150px]">Enter the HR profession or advance in early career stages.</p>
+                <p className="text-xs text-foreground/40 max-w-[150px] mx-auto md:mx-0">Enter the HR profession or advance in early career stages.</p>
               </div>
             </div>
 
@@ -219,7 +219,8 @@ export default function HomePage() {
 
       {/* Recognition */}
       {/* Recognition */}
-      <section className="min-h-screen flex flex-col justify-center py-20 md:py-32 bg-linear-to-b from-background to-muted/30 relative overflow-hidden">
+      {/* Recognition */}
+      <section className="min-h-screen flex flex-col justify-center py-6  bg-linear-to-b from-background to-muted/30 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-primary/5 blur-3xl" />
